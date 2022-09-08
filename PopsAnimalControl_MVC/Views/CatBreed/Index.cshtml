@@ -1,0 +1,59 @@
+﻿@model IEnumerable<PopsAnimalControl_MVC.Models.ViewModels.CatBreedViewModels.CatBreedListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<hr />
+<h2>Cat Breeds</h2>
+
+
+@if (Model.Count() <= 0)
+{
+    <p>There are no available Cat Breeds listed.</p>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cat_BreedID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BreedName)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cat_BreedID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BreedName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Cat_BreedID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Cat_BreedID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Cat_BreedID })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+}

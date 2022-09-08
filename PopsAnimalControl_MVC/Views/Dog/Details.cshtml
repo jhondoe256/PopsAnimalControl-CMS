@@ -1,0 +1,105 @@
+﻿@model PopsAnimalControl_MVC.Models.ViewModels.DogViewModels.DogDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2>Details</h2>
+
+<div>
+    <h4>DogDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfCapture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfCapture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasCollarIdentification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasCollarIdentification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasChipIdentification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasChipIdentification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TempermentType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempermentType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InjuryServerityType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InjuryServerityType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaptureWorth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaptureWorth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BreedID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BreedID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{25511BF4-A3E9-4803-8A7B-8DB1059A10BC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PopsAnimalControl_MVC</RootNamespace>
+    <AssemblyName>PopsAnimalControl_MVC</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44326</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Contracts\IRepository\IApplicantRepo\IApplicantRepository.cs" />
+    <Compile Include="Contracts\IRepository\IBaseRepository.cs" />
+    <Compile Include="Contracts\IRepository\IDepartmentRepo\IDepartmentRepository.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Applicant_Controller\ApplicantController.cs" />
+    <Compile Include="Controllers\Applicant_Controller\MyHub\MyHUBController.cs" />
+    <Compile Include="Controllers\CatBreed_Controller\CatBreedController.cs" />
+    <Compile Include="Controllers\CatCatcher_Controller\CatCatcherController.cs" />
+    <Compile Include="Controllers\CatReport_Controller\CatReportController.cs" />
+    <Compile Include="Controllers\Cat_Controller\CatController.cs" />
+    <Compile Include="Controllers\Department_Controller\DepartmentController.cs" />
+    <Compile Include="Controllers\DogBreed_Controller\DogBreedController.cs" />
+    <Compile Include="Controllers\DogCather_Controller\DogCatcherController.cs" />
+    <Compile Include="Controllers\DogReport_Controller\DogReportController.cs" />
+    <Compile Include="Controllers\Dog_Controller\DogController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HumanResourcesHUB\HumanResourcesHUBController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PokemonCatcher_Controller\PokemonCatcherController.cs" />
+    <Compile Include="Controllers\PokemonReport_Controller\PokemonReportController.cs" />
+    <Compile Include="Controllers\Pokemon_Controller\PokemonController.cs" />
+    <Compile Include="Controllers\Position_Controller\PositionController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109101600123_InitialCreate.cs" />
+    <Compile Include="Migrations\202109101600123_InitialCreate.Designer.cs">
+      <DependentUpon>202109101600123_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109112249287_AddedEmailAddressToApplicantTable_Mvc.cs" />
+    <Compile Include="Migrations\202109112249287_AddedEmailAddressToApplicantTable_Mvc.Designer.cs">
+      <DependentUpon>202109112249287_AddedEmailAddressToApplicantTable_Mvc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CatCatcherData\CatCatcher.cs" />
+    <Compile Include="Models\CatData\Cat.cs" />
+    <Compile Include="Models\CatData\CatBreeds\CatBreedType.cs" />
+    <Compile Include="Models\CatReportData\CatReport.cs" />
+    <Compile Include="Models\DataModels\ApplicantData\Applicant.cs" />
+    <Compile Include="Models\DataModels\DepartmentData\Department.cs" />
+    <Compile Include="Models\DataModels\PositionData\Position.cs" />
+    <Compile Include="Models\DogCatcherData\DogCatcher.cs" />
+    <Compile Include="Models\DogData\Breeds\Breed.cs" />
+    <Compile Include="Models\DogData\Dog.cs" />
+    <Compile Include="Models\DogReportData\DogReport.cs" />
+    <Compile Include="Models\EmployeeData\Employee.cs" />
+    <Compile Include="Models\EmployeeData\IEmployee.cs" />
+    <Compile Include="Models\Enums\InjuryServerityType.cs" />
+    <Compile Include="Models\Enums\Temperment.cs" />
+    <Compile Include="Models\HumanResourcesData\HumanResources.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PokemonCatcherData\PokemonCatcher.cs" />
+    <Compile Include="Models\PokemonData\Pokemon.cs" />
+    <Compile Include="Models\PokemonData\PokemonAbilities\Ability.cs" />
+    <Compile Include="Models\PokemonData\PokemonAbilities\Description.cs" />
+    <Compile Include="Models\PokemonData\PokemonAbilities\Generation.cs" />
+    <Compile Include="Models\PokemonData\PokemonAbilities\Move.cs" />
+    <Compile Include="Models\PokemonData\PokemonAbilities\MoveDamageClass.cs" />
+    <Compile Include="Models\PokemonData\PokemonAbilities\Name.cs" />
+    <Compile Include="Models\PokemonData\PokemonAbilities\PokemonAbility.cs" />
+    <Compile Include="Models\PokemonData\PokemonAbilities\PokemonForm.cs" />
+    <Compile Include="Models\PokemonData\PokemonAbilities\PokemonMove.cs" />
+    <Compile Include="Models\PokemonReportData\PokemonReport.cs" />
+    <Compile Include="Models\ViewModels\ApplicantVieModels\ApplicantCreate.cs" />
+    <Compile Include="Models\ViewModels\ApplicantVieModels\ApplicantDetail.cs" />
+    <Compile Include="Models\ViewModels\ApplicantVieModels\ApplicantEdit.cs" />
+    <Compile Include="Models\ViewModels\ApplicantVieModels\ApplicantListItem.cs" />
+    <Compile Include="Models\ViewModels\BreedViewModels\DogBreedCreate.cs" />
+    <Compile Include="Models\ViewModels\BreedViewModels\DogBreedDetail.cs" />
+    <Compile Include="Models\ViewModels\BreedViewModels\DogBreedEdit.cs" />
+    <Compile Include="Models\ViewModels\BreedViewModels\DogBreedListItem.cs" />
+    <Compile Include="Models\ViewModels\CatBreedViewModels\CatBreedCreate.cs" />
+    <Compile Include="Models\ViewModels\CatBreedViewModels\CatBreedDetail.cs" />
+    <Compile Include="Models\ViewModels\CatBreedViewModels\CatBreedEdit.cs" />
+    <Compile Include="Models\ViewModels\CatBreedViewModels\CatBreedListItem.cs" />
+    <Compile Include="Models\ViewModels\CatCatcherViewModels\CatCatcherCreate.cs" />
+    <Compile Include="Models\ViewModels\CatCatcherViewModels\CatCatcherDetail.cs" />
+    <Compile Include="Models\ViewModels\CatCatcherViewModels\CatCatcherEdit.cs" />
+    <Compile Include="Models\ViewModels\CatCatcherViewModels\CatCatcherListItem.cs" />
+    <Compile Include="Models\ViewModels\CatReportViewModels\CatReportCreate.cs" />
+    <Compile Include="Models\ViewModels\CatReportViewModels\CatReportDetail.cs" />
+    <Compile Include="Models\ViewModels\CatReportViewModels\CatReportEdit.cs" />
+    <Compile Include="Models\ViewModels\CatReportViewModels\CatReportListItem.cs" />
+    <Compile Include="Models\ViewModels\CatViewModels\CatCreate.cs" />
+    <Compile Include="Models\ViewModels\CatViewModels\CatDetail.cs" />
+    <Compile Include="Models\ViewModels\CatViewModels\CatEdit.cs" />
+    <Compile Include="Models\ViewModels\CatViewModels\CatListItem.cs" />
+    <Compile Include="Models\ViewModels\DepartmentViewModels\DepartmentCreate.cs" />
+    <Compile Include="Models\ViewModels\DepartmentViewModels\DepartmentDetail.cs" />
+    <Compile Include="Models\ViewModels\DepartmentViewModels\DepartmentDetailsEmployeeListItem.cs" />
+    <Compile Include="Models\ViewModels\DepartmentViewModels\DepartmentEdit.cs" />
+    <Compile Include="Models\ViewModels\DepartmentViewModels\DepartmentListItem.cs" />
+    <Compile Include="Models\ViewModels\DepartmentViewModels\DepartmentPositionListItem.cs" />
+    <Compile Include="Models\ViewModels\DogCatcherViewModels\DogCatcherCreate.cs" />
+    <Compile Include="Models\ViewModels\DogCatcherViewModels\DogCatcherDetails.cs" />
+    <Compile Include="Models\ViewModels\DogCatcherViewModels\DogCatcherEdit.cs" />
+    <Compile Include="Models\ViewModels\DogCatcherViewModels\DogCatcherListItem.cs" />
+    <Compile Include="Models\ViewModels\DogReportViewModels\DogReportCreate.cs" />
+    <Compile Include="Models\ViewModels\DogReportViewModels\DogReportDetails.cs" />
+    <Compile Include="Models\ViewModels\DogReportViewModels\DogReportEdit.cs" />
+    <Compile Include="Models\ViewModels\DogReportViewModels\DogReportListItem.cs" />
+    <Compile Include="Models\ViewModels\DogViewModels\DogCreate.cs" />
+    <Compile Include="Models\ViewModels\DogViewModels\DogDetail.cs" />
+    <Compile Include="Models\ViewModels\DogViewModels\DogEdit.cs" />
+    <Compile Include="Models\ViewModels\DogViewModels\DogListItem.cs" />
+    <Compile Include="Models\ViewModels\EmployeeViewModels\EmployeeCreate.cs" />
+    <Compile Include="Models\ViewModels\EmployeeViewModels\EmployeeDetail.cs" />
+    <Compile Include="Models\ViewModels\EmployeeViewModels\EmployeeEdit.cs" />
+    <Compile Include="Models\ViewModels\EmployeeViewModels\EmployeeListItem.cs" />
+    <Compile Include="Models\ViewModels\PokemonCatcherViewModels\PokemonCatcherCreate.cs" />
+    <Compile Include="Models\ViewModels\PokemonCatcherViewModels\PokemonCatcherDetail.cs" />
+    <Compile Include="Models\ViewModels\PokemonCatcherViewModels\PokemonCatcherEdit.cs" />
+    <Compile Include="Models\ViewModels\PokemonCatcherViewModels\PokemonCatcherListItem.cs" />
+    <Compile Include="Models\ViewModels\PokemonReportViewModels\PokemonReportCreate.cs" />
+    <Compile Include="Models\ViewModels\PokemonReportViewModels\PokemonReportDetails.cs" />
+    <Compile Include="Models\ViewModels\PokemonReportViewModels\PokemonReportEdit.cs" />
+    <Compile Include="Models\ViewModels\PokemonReportViewModels\PokemonReportListItem.cs" />
+    <Compile Include="Models\ViewModels\PokemonViewModels\PokemonCreate.cs" />
+    <Compile Include="Models\ViewModels\PokemonViewModels\PokemonDetail.cs" />
+    <Compile Include="Models\ViewModels\PokemonViewModels\PokemonEdit.cs" />
+    <Compile Include="Models\ViewModels\PokemonViewModels\PokemonListItem.cs" />
+    <Compile Include="Models\ViewModels\PositionViewModels\PositionCreate.cs" />
+    <Compile Include="Models\ViewModels\PositionViewModels\PositionDetail.cs" />
+    <Compile Include="Models\ViewModels\PositionViewModels\PositionEdit.cs" />
+    <Compile Include="Models\ViewModels\PositionViewModels\PositionListItem.cs" />
+    <Compile Include="PAC_SERVICES\ApplicantServices\ApplicantService.cs" />
+    <Compile Include="PAC_SERVICES\BreedServices\DogBreedService.cs" />
+    <Compile Include="PAC_SERVICES\CatBreedServices\CatBreedService.cs" />
+    <Compile Include="PAC_SERVICES\CatCatcherServices\CatCatcherService.cs" />
+    <Compile Include="PAC_SERVICES\CatReportServices\CatReportService.cs" />
+    <Compile Include="PAC_SERVICES\CatServices\CatService.cs" />
+    <Compile Include="PAC_SERVICES\DepartmentServices\DepartmentService.cs" />
+    <Compile Include="PAC_SERVICES\DogCatcherServices\DogCatcherService.cs" />
+    <Compile Include="PAC_SERVICES\DogReportServices\DogReportService.cs" />
+    <Compile Include="PAC_SERVICES\DogServices\DogService.cs" />
+    <Compile Include="PAC_SERVICES\HumanResourcesHubServices\HumanResourcesHubService.cs" />
+    <Compile Include="PAC_SERVICES\PokemonCatcherServices\PokemonCatcherService.cs" />
+    <Compile Include="PAC_SERVICES\PokemonReportServices\PokemonReportService.cs" />
+    <Compile Include="PAC_SERVICES\PokemonServices\PokemonService.cs" />
+    <Compile Include="PAC_SERVICES\PositionServices\PositionService.cs" />
+    <Compile Include="PAC_SERVICES\Repositories\ApplicantRepository.cs" />
+    <Compile Include="PAC_SERVICES\Repositories\CatBreed_Repo\CatBreedRepository.cs" />
+    <Compile Include="PAC_SERVICES\Repositories\CatCatcher_Repo\CatCatcherRepository.cs" />
+    <Compile Include="PAC_SERVICES\Repositories\CatReport_Repo\CatReportRepository.cs" />
+    <Compile Include="PAC_SERVICES\Repositories\Cat_Repo\CatRepository.cs" />
+    <Compile Include="PAC_SERVICES\Repositories\Department_Repo\DepartmentRepository.cs" />
+    <Compile Include="PAC_SERVICES\Repositories\DogBreed_Repo\DogBreedRepository.cs" />
+    <Compile Include="PAC_SERVICES\Repositories\DogCatcher_Repo\DogCatcherRepo.cs" />
+    <Compile Include="PAC_SERVICES\Repositories\DogReport_Repo\DogReportRepository.cs" />
+    <Compile Include="PAC_SERVICES\Repositories\Dog_Repo\DogRepository.cs" />
+    <Compile Include="PAC_SERVICES\Repositories\PokemonCatcher_Repo\PokemonCatcherRepository.cs" />
+    <Compile Include="PAC_SERVICES\Repositories\PokemonReport_Repo\PokemonReportRepository.cs" />
+    <Compile Include="PAC_SERVICES\Repositories\Pokemon_Repo\PokemonRepository.cs" />
+    <Compile Include="PAC_SERVICES\Repositories\Position_Repo\PositionRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Utilities\ApiMessenger.cs" />
+    <Compile Include="Utilities\Extraction.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PAC_BASE.css" />
+    <Content Include="DogCatcherPics\charmander.jpg" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\HumanResourcesHUB\Index.cshtml" />
+    <Content Include="Views\HumanResourcesHUB\Details.cshtml" />
+    <Content Include="Views\Applicant\Create.cshtml" />
+    <Content Include="Views\MyHUB\MyInfo.cshtml" />
+    <Content Include="Views\MyHUB\Index.cshtml" />
+    <Content Include="Views\MyHUB\EditApplication.cshtml" />
+    <Content Include="Views\Department\Index.cshtml" />
+    <Content Include="Views\Department\Details.cshtml" />
+    <Content Include="Views\Department\Create.cshtml" />
+    <Content Include="Views\Department\Edit.cshtml" />
+    <Content Include="Views\Department\Delete.cshtml" />
+    <Content Include="Views\Position\Index.cshtml" />
+    <Content Include="Views\Position\Details.cshtml" />
+    <Content Include="Views\Position\Create.cshtml" />
+    <Content Include="Views\Position\Edit.cshtml" />
+    <Content Include="Views\Position\Delete.cshtml" />
+    <Content Include="Views\DogCatcher\Index.cshtml" />
+    <Content Include="Views\DogCatcher\Details.cshtml" />
+    <Content Include="Views\DogCatcher\Edit.cshtml" />
+    <Content Include="Views\DogCatcher\Delete.cshtml" />
+    <Content Include="Views\CatCatcher\Edit.cshtml" />
+    <Content Include="Views\CatCatcher\Delete.cshtml" />
+    <Content Include="Views\PokemonCatcher\Index.cshtml" />
+    <Content Include="Views\PokemonCatcher\Delete.cshtml" />
+    <Content Include="Views\PokemonCatcher\Edit.cshtml" />
+    <Content Include="Views\CatCatcher\Index.cshtml" />
+    <Content Include="Views\CatCatcher\Details.cshtml" />
+    <Content Include="Views\PokemonCatcher\Details.cshtml" />
+    <Content Include="Views\DogBreed\Index.cshtml" />
+    <Content Include="Views\DogBreed\Details.cshtml" />
+    <Content Include="Views\DogBreed\Create.cshtml" />
+    <Content Include="Views\DogBreed\Delete.cshtml" />
+    <Content Include="Views\DogBreed\Edit.cshtml" />
+    <Content Include="Views\Dog\Index.cshtml" />
+    <Content Include="Views\Dog\Edit.cshtml" />
+    <Content Include="Views\Dog\Delete.cshtml" />
+    <Content Include="Views\DogReport\Index.cshtml" />
+    <Content Include="Views\DogReport\Details.cshtml" />
+    <Content Include="Views\DogReport\Edit.cshtml" />
+    <Content Include="Views\DogReport\Create.cshtml" />
+    <Content Include="Views\CatBreed\Index.cshtml" />
+    <Content Include="Views\CatBreed\Create.cshtml" />
+    <Content Include="Views\CatBreed\Details.cshtml" />
+    <Content Include="Views\CatBreed\Edit.cshtml" />
+    <Content Include="Views\CatBreed\Delete.cshtml" />
+    <Content Include="Views\Cat\Index.cshtml" />
+    <Content Include="Views\Cat\Details.cshtml" />
+    <Content Include="Views\Cat\Delete.cshtml" />
+    <Content Include="Views\CatReport\Index.cshtml" />
+    <Content Include="Views\CatReport\Create.cshtml" />
+    <Content Include="Views\CatReport\Details.cshtml" />
+    <Content Include="Views\CatReport\Edit.cshtml" />
+    <Content Include="Views\Dog\Details.cshtml" />
+    <Content Include="Views\Cat\Edit.cshtml" />
+    <Content Include="Views\Pokemon\Index.cshtml" />
+    <Content Include="Views\Pokemon\Details.cshtml" />
+    <Content Include="Views\Pokemon\Edit.cshtml" />
+    <Content Include="Views\Pokemon\Delete.cshtml" />
+    <Content Include="Views\PokemonReport\Index.cshtml" />
+    <Content Include="Views\PokemonReport\Details.cshtml" />
+    <Content Include="Views\PokemonReport\Create.cshtml" />
+    <Content Include="Views\PokemonReport\Edit.cshtml" />
+    <Content Include="Views\Shared\_DogCatchersList.cshtml" />
+    <Content Include="Views\HumanResourcesHUB\DogCatcherApplicants.cshtml" />
+    <Content Include="Views\Shared\_DogCatcherApplicants.cshtml" />
+    <Content Include="Views\DogCatcher\Create.cshtml" />
+    <Content Include="Views\Shared\_Departments.cshtml" />
+    <Content Include="Views\HumanResourcesHUB\PokemonCatcherApplicants.cshtml" />
+    <Content Include="Views\HumanResourcesHUB\CatCatcherApplicants.cshtml" />
+    <Content Include="Views\Shared\_CatCatcherApplicants.cshtml" />
+    <Content Include="Views\CatCatcher\Create.cshtml" />
+    <Content Include="Views\Shared\_PokmonCatcherApplicants.cshtml" />
+    <Content Include="Views\PokemonCatcher\Create.cshtml" />
+    <Content Include="Views\Shared\_CatCatcherListItems.cshtml" />
+    <Content Include="Views\Shared\_PokemonCatchersListItem.cshtml" />
+    <Content Include="Views\Shared\_AvailableApplicants.cshtml" />
+    <Content Include="Views\Shared\_AvailablePositions.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="PAC_SERVICES\EmployeeServices\" />
+    <Folder Include="Views\Employees\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202109101600123_InitialCreate.resx">
+      <DependentUpon>202109101600123_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109112249287_AddedEmailAddressToApplicantTable_Mvc.resx">
+      <DependentUpon>202109112249287_AddedEmailAddressToApplicantTable_Mvc.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50712</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44326/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

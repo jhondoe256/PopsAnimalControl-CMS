@@ -1,0 +1,38 @@
+NEED TO RE-MAPP EMPLOYEES TO ITERMINATED employees
+
+need a service to create a new Terminated employee and Show a listing of Terminated Employees (maybe SQL Trigger)
+
+
+
+I WANT THE ABILITY TO ADD AN EMPLOYEE TO A SPECIFFIC POISTION	
+
+Each department has a list of poistions? Postion -> should be a class
+
+Take Department off IEmployee
+
+User Roles for employees and management
+
+
+Each department should have own crud... and methods for employees ....
+
+Create Employee Bonus Table -> give out increases in pay
+Bonuses are restricted to the position(s)
+housekeepers cannot get AnimalCatcher(s) bonuses
+
+WANT A TABLE OF 'UN-HIRED' APPLICANTS
+WANT A TABLE OF 'FIRED' APPLICANTS
+
+Method that hides all but the last 4 SSN Numbers
+
+May use IPosition -> IVeterinaryPosition, IDogCathcerPosition to FURTHER create modularity
+
+DO THE HIRING PROCESS FIRST.... TAKE THE APPLICANT FROM THE APPLICANT DBSET AND MOVE IT TO THE HIRED TABLE(Employee Name ,HireDate) [This could be a trigger]
+AND MAKE A EMPLOYEE COUNT VARIABLE THAT COUNTS EACH EMPLOYEE???
+
+
+MAPP APPLICANT to a IEmployee and then assign the applicant(Iemployee) to the nessacery position, subtract from position count
+
+
+After Employees have been hired and added to a position -> they need to be enlisted into the position via the Job/Controller
+
+Manager(s)/Admin(s) Can see the listing of all employees.

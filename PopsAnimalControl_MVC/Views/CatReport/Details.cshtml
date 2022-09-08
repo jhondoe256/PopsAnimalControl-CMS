@@ -1,0 +1,174 @@
+﻿@model PopsAnimalControl_MVC.Models.ViewModels.CatReportViewModels.CatReportDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2>Details</h2>
+
+<div>
+    <h4>CatReportDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ReportID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReportID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfCapture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfCapture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasCollarIdentification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasCollarIdentification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasChipIdentification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasChipIdentification)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TempermentType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempermentType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InjurySeverityType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InjurySeverityType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CaptureWorth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaptureWorth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CatBreedID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CatBreedID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BreedName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BreedName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EventDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PositionTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PositionTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModificationionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModificationionDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.ReportID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

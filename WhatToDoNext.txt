@@ -1,0 +1,36 @@
+HumanResources Crud --done needs PstMan testing
+Managers Crud   --done needs PstMan testing
+Secretary Crud  --done needs PstMan testing                                  >--------Get these done first!
+Veterinarians Crud --done needs PstMan testing
+VetTech Crud       --done needs PstMan testing
+HouseKeeping Crud  --done needs PstMan testing
+
+Cats Crud            --done needs PstMan testing
+Dogs Crud            --done needs PstMan testing
+Breeds Crud          --done needs PstMan testing
+
+*Reports Crud*
+-DogCatcher Report  --done
+-CatCatcher Report  --done
+
+------------Have to do last for api consumption-------
+PokemonCatcher Crud  --done
+Pokemon Crud        --done
+-PokeCatcher Report  
+
+TerminatedEmployees is a Table that isFiredEmployees go into for 'Tracking'
+
+
+CHECK TO SEE IF AN APPLICAT RETURNS NULL -> IN ALL EMPLOYEE SERVICE(S)
+
+LOOK UP HOW TO HIDE VARIABLES THAT I WANT TO USE THE DATABASE TO RETRIVE DATA....
+
+AnimaalRemovalHub that removes the animals Management/Admins only Removal can be newOwner/euthanized
+
+EMPLOYEES HAVE TO GRAB INFO ABOUT EMPLOYEES FROM TEH EMPLOYEE TABLE TO ASSIGN THEM TO A REPORT-> EMPLOYEEID HAS TO BE USED
+
+IMPLEMENT INTERFACES(GENERIC) THAT WILL UTILISE THE SERVICE SETUP IN MVC
+
+CREATE TEAM(s) FOR CATCHERS, FOR SELECTION IN MVC
+
+MAKE SURE TO TEST MAKING AN ANIMAL TABLE THAT HAS ALL TYPES OF ANIMALS -> YET THROUGH QUERIES MAKE MULTIPLE 'GET' SERVICES PER ANIMAL VIA THEIR INTERFACES!!!

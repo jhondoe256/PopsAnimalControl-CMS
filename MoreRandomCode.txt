@@ -1,0 +1,89 @@
+var referenceA = new Reference
+                {
+                    CompanyName = applicant.CompanyAName,
+                    Address = applicant.CompanyAAddress,
+                    ReferenceFirstName = applicant.CompanyAReferenceFirstName,
+                    ReferenceLastName = applicant.CompanyAReferenceLastName,
+                    DateStarted = applicant.CompanyADateStarted,
+                    DateEnded = applicant.CompanyADateEnded,
+                    MayWeContactThisEmployer = applicant.CompanyAMayWeContactThisEmployer
+                };
+                var valA =ctx.References.Add(referenceA);
+                
+                Applicant_Reference applicat_Reference = new Applicant_Reference
+                {
+                    ApplicantID = entity.ID,
+                    ReferenceID = valA.ReferenceID
+                };
+
+                ctx.Applicant_References.Add(applicat_Reference);
+
+                var referenceB = new Reference
+                {
+                    CompanyName = applicant.CompanyBName,
+                    Address = applicant.CompanyBAddress,
+                    ReferenceFirstName = applicant.CompanyBReferenceFirstName,
+                    ReferenceLastName = applicant.CompanyBReferenceLastName,
+                    DateStarted = applicant.CompanyBDateStarted,
+                    DateEnded = applicant.CompanyBDateEnded,
+                    MayWeContactThisEmployer = applicant.CompanyBMayWeContactThisEmployer
+                };
+
+                var valB = ctx.References.Add(referenceB);
+
+                Applicant_Reference applicat_Reference2 = new Applicant_Reference
+                {
+                    ApplicantID = entity.ID,
+                    ReferenceID = valB.ReferenceID
+                };
+                ctx.Applicant_References.Add(applicat_Reference2);
+
+                var referenceC = new Reference
+                {
+                    CompanyName = applicant.CompanyCName,
+                    Address = applicant.CompanyCAddress,
+                    ReferenceFirstName = applicant.CompanyCReferenceFirstName,
+                    ReferenceLastName = applicant.CompanyCReferenceLastName,
+                    DateStarted = applicant.CompanyCDateStarted,
+                    DateEnded = applicant.CompanyCDateEnded,
+                    MayWeContactThisEmployer = applicant.CompanyCMayWeContactThisEmployer
+                };
+
+                var valC = ctx.References.Add(referenceC);
+
+                Applicant_Reference applicat_Reference3 = new Applicant_Reference
+                {
+                    ApplicantID = entity.ID,
+                    ReferenceID = valC.ReferenceID
+                };
+                ctx.Applicant_References.Add(applicat_Reference3);
+                await ctx.SaveChangesAsync();
+
+
+
+                ------------------------------------------------------------------
+                delete dogcatcher 
+
+                  var dogCatcher = await _context.DogCatchers.FindAsync(id);
+            if (dogCatcher is null)
+            {
+                return false;
+            }
+            dogCatcher.Position = await _context.Positions.FindAsync(dogCatcher.PositionID);
+            dogCatcher.Position.AvailablePositionCount++;
+            _context.DogCatchers.Remove(dogCatcher);
+            return await Save();
+
+
+            -------------------------------------------------------------------------------------
+            mvc img stuff
+            //setup of image
+            string fileName = Path.GetFileNameWithoutExtension(entity.ImageFile.FileName);
+            string extension = Path.GetExtension(entity.ImageFile.FileName);
+            fileName += extension;
+
+            entity.ImageSource = entity.ImageSource = "~/DogCatcherPics/" + fileName;
+            entity.ImageFile = entity.ImageFile;
+
+
+            fileName = Path.Combine();

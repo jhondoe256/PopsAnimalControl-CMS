@@ -1,0 +1,25 @@
+
+        [HttpGet]
+        [Route("api/GetPokemon/{pokename}")]
+        public async Task<IHttpActionResult> GetPokeDataFromApi([FromUri] string pokename)
+        {
+            if (pokename is null)
+            {
+                return BadRequest();
+            }
+            var svc = CreatePokemonService();
+            var pokemon = await svc.GetPokeDataFromApi(pokename);
+            return Ok(pokemon);
+        }
+        [HttpGet]
+        [Route("api/GetPokemon/{pokeID:int}")]
+        public async Task<IHttpActionResult> GetPokeDataFromApi([FromUri] int pokeID)
+        {
+            if (pokeID < 1)
+            {
+                return BadRequest();
+            }
+            var svc = CreatePokemonService();
+            var pokemon = await svc.GetPokeDataFromApi(pokeID);
+            return Ok(pokemon);
+        }

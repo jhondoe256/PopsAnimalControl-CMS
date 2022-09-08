@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopsAnimalControl_Api", "PopsAnimalControl_Api\PopsAnimalControl_Api.csproj", "{0FE907D6-4C77-4911-B915-A8F2348BFF07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PAC.Data", "PAC.Data\PAC.Data.csproj", "{0978A011-89A1-49DB-AFC9-96186CE606A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PAC.Services", "PAC.Services\PAC.Services.csproj", "{04FFFBA0-05DA-412F-867D-AE26276BDAA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AD5A65BD-7BC6-47B3-BAF7-121106A76E8A}"
+	ProjectSection(SolutionItems) = preProject
+		Checklist.txt = Checklist.txt
+		DogCreate_CodeStuff.txt = DogCreate_CodeStuff.txt
+		Json_FutureReference_DogCatcherByID.txt = Json_FutureReference_DogCatcherByID.txt
+		MoreRandomCode.txt = MoreRandomCode.txt
+		MvcController_MyHubCode.txt = MvcController_MyHubCode.txt
+		NOTES.txt = NOTES.txt
+		PokemonControllerTestMethods.txt = PokemonControllerTestMethods.txt
+		RandomCodeA.txt = RandomCodeA.txt
+		WhatToDoNext.txt = WhatToDoNext.txt
+		WMD.txt = WMD.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PAC.Models", "PAC.Models\PAC.Models.csproj", "{C7829332-C54C-4605-B9E5-090462F39128}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopsAnimalControl_MVC", "PopsAnimalControl_MVC\PopsAnimalControl_MVC.csproj", "{25511BF4-A3E9-4803-8A7B-8DB1059A10BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopsAnimalControl_Console_UI", "PopsAnimalControl_Console_UI\PopsAnimalControl_Console_UI.csproj", "{862D6145-F625-4290-9915-5D31C482ADBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FE907D6-4C77-4911-B915-A8F2348BFF07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FE907D6-4C77-4911-B915-A8F2348BFF07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FE907D6-4C77-4911-B915-A8F2348BFF07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FE907D6-4C77-4911-B915-A8F2348BFF07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0978A011-89A1-49DB-AFC9-96186CE606A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0978A011-89A1-49DB-AFC9-96186CE606A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0978A011-89A1-49DB-AFC9-96186CE606A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0978A011-89A1-49DB-AFC9-96186CE606A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04FFFBA0-05DA-412F-867D-AE26276BDAA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04FFFBA0-05DA-412F-867D-AE26276BDAA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04FFFBA0-05DA-412F-867D-AE26276BDAA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04FFFBA0-05DA-412F-867D-AE26276BDAA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7829332-C54C-4605-B9E5-090462F39128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7829332-C54C-4605-B9E5-090462F39128}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7829332-C54C-4605-B9E5-090462F39128}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7829332-C54C-4605-B9E5-090462F39128}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25511BF4-A3E9-4803-8A7B-8DB1059A10BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25511BF4-A3E9-4803-8A7B-8DB1059A10BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25511BF4-A3E9-4803-8A7B-8DB1059A10BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25511BF4-A3E9-4803-8A7B-8DB1059A10BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{862D6145-F625-4290-9915-5D31C482ADBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{862D6145-F625-4290-9915-5D31C482ADBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{862D6145-F625-4290-9915-5D31C482ADBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{862D6145-F625-4290-9915-5D31C482ADBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DFAACC4-211C-4653-ADB8-FB47C7AB7C03}
+	EndGlobalSection
+EndGlobal

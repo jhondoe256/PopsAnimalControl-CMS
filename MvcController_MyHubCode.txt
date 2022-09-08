@@ -1,0 +1,36 @@
+using(var ctx = new ApplicationDbContext())
+            {
+                var svc = CreateApplicantService();
+                var me = ctx.Users.Find(user.ToString());
+                
+                //  var applicantInfo = await svc.GetApplicant(ApiMessenger.Applicant, user);
+                //  return View(applicantInfo);
+                return View(me);
+            }
+
+
+            make a method FindMe() -> gets the user from the Api (email)-> then returns that users info to myHub
+
+
+
+
+            *HumanResourcesHubService*
+
+            var request = new HttpRequestMessage(HttpMethod.Get, URL + id);
+            HttpResponseMessage response = await _client.SendAsync(request);
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<ApplicantDetail>(content);
+            }
+            return null;
+
+
+            *MyHubController*
+            
+            public async Task<ActionResult> MyInfo(int id)
+           {
+            var svc = CreateApplicantService();
+            var applicantInfo = await svc.GetApplicant(ApiMessenger.Applicant,id);
+            return View(applicantInfo);
+           }

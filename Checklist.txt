@@ -1,0 +1,39 @@
+APPLICANTS -DONE
+HRHUB-DONE
+MYHUB-DONE
+
+DEPARTMENTS -DONE
+             >- Full CRUD
+POSITIONS -DONE
+
+DogCatcher -Done
+CatCatcher -Done
+PokemonCatcher -DONE
+*NEED TO REMOVE THE EMPLOYEE FROM THE DEPARTMENT LISTING WHEN EMPLOYEE IS DELETED!!!!!* -DONE
+
+*Make SURE TO MAKE THE POKEMON AND CAT CATHERS INFO IN VIEW MODELS MATCH THE DOG CATCHER'S!!!!* 
+
+Dogbreeds -DONE
+            >----
+CatBreed -DONE
+Pokemon
+
+Dc-Reports -DONE
+Cc-Reports -DONE
+Pc-Reports -DONE
+
+*try to make a dropdown selection based on the employeeId*
+
+*Maybe-ApplicationUser 
+*Make Dog catcher Cat catcher Poke Catcher imgs for update methods?
+*
+
+Make the Call to the api to set up guid 
+then make a call to the api to retrive guid for  sign-up
+
+*VERSION 2 CHANGES*-----------------------------------------------------------
+Manager
+HouseKeeper
+Secretary
+VetTech
+Veterinarian

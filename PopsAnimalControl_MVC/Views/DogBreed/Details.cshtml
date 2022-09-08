@@ -1,0 +1,50 @@
+﻿@model PopsAnimalControl_MVC.Models.ViewModels.BreedViewModels.DogBreedDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DogBreedDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BreedID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BreedID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BreedName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BreedName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Section)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Section)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.BreedID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

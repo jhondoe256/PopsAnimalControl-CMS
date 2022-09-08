@@ -1,0 +1,103 @@
+﻿@model PopsAnimalControl_MVC.Models.ViewModels.PokemonViewModels.PokemonDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PokemonDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PokemonBirthName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PokemonBirthName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PokeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PokeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfCapture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfCapture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasCollarIdentification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasCollarIdentification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasChipIdentification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasChipIdentification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaptureWorth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaptureWorth)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

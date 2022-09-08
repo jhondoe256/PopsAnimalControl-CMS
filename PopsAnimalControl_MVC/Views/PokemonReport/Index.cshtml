@@ -1,0 +1,77 @@
+﻿@model IEnumerable<PopsAnimalControl_MVC.Models.ViewModels.PokemonReportViewModels.PokemonReportListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<hr />
+<h2>Pokemon Reports</h2>
+
+
+@if (Model.Count() <= 0)
+{
+    <p>There aren't any Available Pokemon Reports</p>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ReportID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreationDate)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReportID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmployeeID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreationDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.ReportID  }) |
+                    @Html.ActionLink("Details", "Details", new {  id=item.ReportID }) 
+                    @*@Html.ActionLink("Delete", "Delete", new { id=item.ReportID })*@
+                </td>
+            </tr>
+        }
+
+    </table>
+}

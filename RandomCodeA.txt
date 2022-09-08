@@ -1,0 +1,57 @@
+ [HttpGet]
+        public async Task<IHttpActionResult> Get()
+        {
+            var svc = CreateApplicantService();
+            var applicants = await svc.GetApplicantsAsync();
+            return Ok(applicants);
+        }
+        [HttpGet]
+        public async Task<IHttpActionResult> Get(int id)
+        {
+            var svc = CreateApplicantService();
+            var applicant = await svc.GetApplicantDetailAsync(id);
+            if (applicant is null)
+            {
+                return NotFound();
+            }
+            return Ok(applicant);
+        }
+
+
+
+        ----------------------AppUserStuff-----------------------------
+
+          public async Task<IEnumerable<ApplicationUserListItem>> Get()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                //var user = ctx
+                //    .Users
+                //    .Where(u => u.Id == _userId.ToString()).Single();
+                var users =
+                    await
+                    ctx
+                    .Users
+                    .Where(u => u.Id == _userId.ToString())
+                    .Select(u => new ApplicationUserListItem
+                    {
+                        ID=u.Id,
+                        Email=u.Email,
+                        //Roles= new Dictionary<string, string> 
+                        //{
+                        //    {u.Id,u.UserName }
+
+                        //}
+                    }).ToListAsync();
+                return users;
+            }
+        }
+
+
+        ---------------------PokeCatcher--------------------------
+         var employee= ctx.Employees.SingleOrDefault(e => e.EmployeeID == pokemonCatcher.EmployeeID);
+                if (employee is null)
+                {
+                    return false;
+                }
+                ctx.Employees.Remove(employee);

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<PopsAnimalControl_MVC.Models.ViewModels.ApplicantVieModels.ApplicantListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2>Available Applicants</h2>
+<hr />
+@if (Model is null)
+{
+    <p>There are No available Applicants!</p>
+}
+else
+{
+    foreach (var item in Model)
+    {
+        @Html.Partial("_AvailableApplicants",item)
+    }
+}

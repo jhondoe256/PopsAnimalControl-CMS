@@ -1,0 +1,22 @@
+﻿body {
+
+}
+
+._form {
+
+    display:inline-block;
+    width:50%;
+}
+
+._positions {
+ 
+    width: 15%;
+   position:absolute;
+   right:600px;
+   top:303px;
+}
+/*._hireableApplicants{
+    width:40%;
+    margin-left:570px;
+    margin-bottom:800px;
+}*/

@@ -1,0 +1,54 @@
+﻿@model PopsAnimalControl_MVC.Models.ViewModels.DogCatcherViewModels.DogCatcherDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h1>DogCatcherDetails</h1>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModificationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModificationDate)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <h2>Assigned Position:</h2>
+    <p>@Model.Position.Name</p>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new {  id = Model.EmployeeID }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>

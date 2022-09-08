@@ -1,0 +1,80 @@
+﻿@model PopsAnimalControl_MVC.Models.ViewModels.CatBreedViewModels.CatBreedDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CatBreedDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cat_BreedID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cat_BreedID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Breed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Breed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationAndOrigin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationAndOrigin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BodyType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BodyType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoatTypeAndLength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoatTypeAndLength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoatPattern)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoatPattern)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<PopsAnimalControl_MVC.Models.ViewModels.PositionViewModels.PositionListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<hr />
+<h1>Available Positions</h1>
+
+@if (Model is null)
+{
+    <p>There aren't any Avaiable positions!</p>
+}
+else
+{
+    foreach (var item in Model)
+    {
+        @Html.Partial("_AvailablePositions",item)
+    }
+}

@@ -1,0 +1,21 @@
+entity.OwnerID = _userId;
+            entity.Position = await _context.Positions.SingleOrDefaultAsync(p => p.PositionID == entity.PositionID);
+
+            entity.Position.AvailablePositionCount--;
+            
+            var applicant = await _context.Applicants.SingleOrDefaultAsync(a => a.FirstName == entity.FirstName && a.LastName == entity.LastName);
+
+            if (applicant != null)
+            {
+                _context.Applicants.Remove(applicant);
+                var department = await _context.Departments.FindAsync(5);
+                entity.Department = department;
+                entity.DepartmentID = department.ID;
+                department.Employees.Add(entity);
+                _context.DogCatchers.Add(entity);
+                return await Save();
+            }
+            else
+            {
+                return false;
+            }

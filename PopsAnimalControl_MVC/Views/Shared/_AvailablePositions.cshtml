@@ -1,0 +1,14 @@
+﻿@model PopsAnimalControl_MVC.Models.ViewModels.PositionViewModels.PositionListItem
+
+<div class="col-6">
+    <div class="panel-default ">
+        <div class="panel-heading">
+            <h3 class="panel-title">ID:@Model.PositionID - @Model.Name</h3>
+        </div>
+        <div class="panel-body">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.PositionID }) |
+            @Html.ActionLink("Details", "Details", new { id = Model.PositionID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = Model.PositionID })
+        </div>
+    </div>
+</div>

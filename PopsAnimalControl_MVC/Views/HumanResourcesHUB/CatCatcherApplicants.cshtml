@@ -1,0 +1,27 @@
+﻿@model IEnumerable<PopsAnimalControl_MVC.Models.ViewModels.ApplicantVieModels.ApplicantListItem>
+
+@{
+    ViewBag.Title = "CatCatcherApplicants";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2>CatCatcherApplicants</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@if (Model.Count() <= 0)
+{
+    <p>There aren't any Available Cat Catcher Applicants</p>
+}
+else
+{
+    foreach (var item in Model)
+    {
+        @Html.Partial("_CatCatcherApplicants",item)
+    }
+}

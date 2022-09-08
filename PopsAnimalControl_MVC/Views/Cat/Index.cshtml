@@ -1,0 +1,48 @@
+﻿@model IEnumerable<PopsAnimalControl_MVC.Models.ViewModels.CatViewModels.CatListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2>Rescued Cats:</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+@if (Model.Count() <= 0)
+{
+    <p>There aren't any apprehended cats.</p>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+}

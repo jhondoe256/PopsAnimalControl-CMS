@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0978A011-89A1-49DB-AFC9-96186CE606A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PAC.Data</RootNamespace>
+    <AssemblyName>PAC.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.7\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animals\Breeds\Breed.cs" />
+    <Compile Include="Animals\Breeds\CatBreedType.cs" />
+    <Compile Include="Animals\Cats\Cat.cs" />
+    <Compile Include="Animals\Dogs\Dog.cs" />
+    <Compile Include="Animals\ENUMS\InjuryServerityType.cs" />
+    <Compile Include="Animals\ENUMS\Temperment.cs" />
+    <Compile Include="Animals\Pokemon\Pokemon.cs" />
+    <Compile Include="Animals\Pokemon\PokemonAbilities\Ability.cs" />
+    <Compile Include="Animals\Pokemon\PokemonAbilities\MoveDamageClass.cs" />
+    <Compile Include="Animals\Pokemon\PokemonAbilities\Description.cs" />
+    <Compile Include="Animals\Pokemon\PokemonAbilities\Generation.cs" />
+    <Compile Include="Animals\Pokemon\PokemonAbilities\Move.cs" />
+    <Compile Include="Animals\Pokemon\PokemonAbilities\Name.cs" />
+    <Compile Include="Animals\Pokemon\PokemonAbilities\PokemonAbility.cs" />
+    <Compile Include="Animals\Pokemon\PokemonAbilities\PokemonForm.cs" />
+    <Compile Include="Animals\Pokemon\PokemonAbilities\PokemonMove.cs" />
+    <Compile Include="CatCatchers\CatCatcher.cs" />
+    <Compile Include="Contracts\IAnimals\IAnimal.cs" />
+    <Compile Include="Contracts\IAnimals\IBreedables\IBreed.cs" />
+    <Compile Include="Contracts\IAnimals\IBreedables\IBreedable.cs" />
+    <Compile Include="Contracts\IAnimals\ICats\ICat.cs" />
+    <Compile Include="Contracts\IAnimals\IDogs\IDog.cs" />
+    <Compile Include="Contracts\IAnimals\IIdentifiables\IIdentifiable.cs" />
+    <Compile Include="Contracts\IAnimals\INameables\INameable.cs" />
+    <Compile Include="Contracts\IAnimals\IPokemons\IPokeIdentifiables\IPokeIdentifiable.cs" />
+    <Compile Include="Contracts\IAnimals\IPokemons\IPokemon.cs" />
+    <Compile Include="Contracts\IAnimals\IPokemons\IPokeNameables\IPokeNameable.cs" />
+    <Compile Include="Contracts\IAnimals\IPokemons\IPoke_s\IPoke.cs" />
+    <Compile Include="Contracts\IApplicants\IApplicant.cs" />
+    <Compile Include="Contracts\ICreation_Modifications\ICreation_Modification.cs" />
+    <Compile Include="Contracts\IDepartments\IDepartment.cs" />
+    <Compile Include="Contracts\IEmployees\IDogCatchers\IDogCatcher.cs" />
+    <Compile Include="Contracts\IEmployees\IEmployee.cs" />
+    <Compile Include="Contracts\IEmployees\IEmployeeReportInfo.cs" />
+    <Compile Include="Contracts\IEmployees\IHouseKepping_s\IHouseKeeper.cs" />
+    <Compile Include="Contracts\IEmployees\IHuman_R\IHired_Emp\IHireable.cs" />
+    <Compile Include="Contracts\IEmployees\IHuman_R\IHumanResources.cs" />
+    <Compile Include="Contracts\IEmployees\IHuman_R\IReferences\IReference.cs" />
+    <Compile Include="Contracts\IEmployees\IManagers\IManager.cs" />
+    <Compile Include="Contracts\IEmployees\IPositions\IPosition.cs" />
+    <Compile Include="Contracts\IEmployees\ISecretaries\ISecretary.cs" />
+    <Compile Include="Contracts\IEmployees\IVeterinarians\IVeterinarian.cs" />
+    <Compile Include="Contracts\IEmployees\IVetTechs\IVetTech.cs" />
+    <Compile Include="Contracts\IReports\ICatReports\ICatReport.cs" />
+    <Compile Include="Contracts\IReports\IDogReports\IDogReport.cs" />
+    <Compile Include="Contracts\IReports\IEventDescriptions\IEventDescription.cs" />
+    <Compile Include="Contracts\IReports\IPokeReports\IPokeReport.cs" />
+    <Compile Include="Contracts\IReports\IReport.cs" />
+    <Compile Include="Contracts\ITerminated\ITerminatedEmployee.cs" />
+    <Compile Include="Contracts\VetTechs\VetTech.cs" />
+    <Compile Include="Departments\Department.cs" />
+    <Compile Include="DogCatchers\DogCatcher.cs" />
+    <Compile Include="Employees\Applicants\Applicant.cs" />
+    <Compile Include="Employees\Applicants\Applicant_References\Applicant_Reference.cs" />
+    <Compile Include="Employees\Applicants\References\Reference.cs" />
+    <Compile Include="Employees\Employee.cs" />
+    <Compile Include="Employees\HouesKeepers\HouseKeeper.cs" />
+    <Compile Include="Employees\Positions\Position.cs" />
+    <Compile Include="HumanResource_s\HiredEmployee_s\HiredEmployee.cs" />
+    <Compile Include="HumanResource_s\HumanResources.cs" />
+    <Compile Include="IdentityModels.cs" />
+    <Compile Include="Managers\Manager.cs" />
+    <Compile Include="Migrations\202108231402530_Init.cs" />
+    <Compile Include="Migrations\202108231402530_Init.Designer.cs">
+      <DependentUpon>202108231402530_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108240233414_Empty01.cs" />
+    <Compile Include="Migrations\202108240233414_Empty01.Designer.cs">
+      <DependentUpon>202108240233414_Empty01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108260744154_Revision1.cs" />
+    <Compile Include="Migrations\202108260744154_Revision1.Designer.cs">
+      <DependentUpon>202108260744154_Revision1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109112241416_AddedEmailAddressToApplicantTable.cs" />
+    <Compile Include="Migrations\202109112241416_AddedEmailAddressToApplicantTable.Designer.cs">
+      <DependentUpon>202109112241416_AddedEmailAddressToApplicantTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109181649283_AddingDogCatcherImgStuff.cs" />
+    <Compile Include="Migrations\202109181649283_AddingDogCatcherImgStuff.Designer.cs">
+      <DependentUpon>202109181649283_AddingDogCatcherImgStuff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109251602574_addingDoctorRole.cs" />
+    <Compile Include="Migrations\202109251602574_addingDoctorRole.Designer.cs">
+      <DependentUpon>202109251602574_addingDoctorRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PokemonCatchers\PokemonCatcher.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\CatReports\CatReport.cs" />
+    <Compile Include="Reports\DogReports\DogReport.cs" />
+    <Compile Include="Reports\PokemonReports\PokemonReport.cs" />
+    <Compile Include="Reports\Report.cs" />
+    <Compile Include="Secretaries\Secretary.cs" />
+    <Compile Include="TerminatedEmployees\TerminatedEmployee.cs" />
+    <Compile Include="Utilities\BreedUitilities\CsvReaderDogBreeds.cs" />
+    <Compile Include="Veterinarians\Veterinarian.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202108231402530_Init.resx">
+      <DependentUpon>202108231402530_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108240233414_Empty01.resx">
+      <DependentUpon>202108240233414_Empty01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108260744154_Revision1.resx">
+      <DependentUpon>202108260744154_Revision1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109112241416_AddedEmailAddressToApplicantTable.resx">
+      <DependentUpon>202109112241416_AddedEmailAddressToApplicantTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109181649283_AddingDogCatcherImgStuff.resx">
+      <DependentUpon>202109181649283_AddingDogCatcherImgStuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109251602574_addingDoctorRole.resx">
+      <DependentUpon>202109251602574_addingDoctorRole.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

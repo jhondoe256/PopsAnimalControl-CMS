@@ -1,0 +1,14 @@
+﻿@model PopsAnimalControl_MVC.Models.ViewModels.CatCatcherViewModels.CatCatcherListItem
+
+<div class="col-6">
+    <div class="panel-default ">
+        <div class="panel-heading">
+            <h3 class="panel-title">@Model.FirstName @Model.LastName</h3>
+        </div>
+        <div class="panel-body">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeID }) |
+            @Html.ActionLink("Details", "Details", new { id = Model.EmployeeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = Model.EmployeeID })
+        </div>
+    </div>
+</div>

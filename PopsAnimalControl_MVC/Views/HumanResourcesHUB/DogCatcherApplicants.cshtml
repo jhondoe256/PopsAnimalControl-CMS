@@ -1,0 +1,23 @@
+﻿@model IEnumerable<PopsAnimalControl_MVC.Models.ViewModels.ApplicantVieModels.ApplicantListItem>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+@if (Model.Count() <= 0)
+{
+    <p>There are no available Dog Catcher Applicants.</p>
+}
+else
+{
+    foreach (var item in Model)
+    {
+        @Html.Partial("_DogCatcherApplicants", item);
+      
+    }
+
+}

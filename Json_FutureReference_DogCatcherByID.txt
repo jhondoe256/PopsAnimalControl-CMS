@@ -1,0 +1,43 @@
+"EmployeeID": 1,
+    "FullName": "Guinevere Beck",
+    "PositionID": 4,
+    "Position": {
+        "PositionID": 4,
+        "Name": "Dog Catcher ",
+        "DepartmentID": 2,
+        "Department": {
+            "Department_Positions": [
+                {
+                    "PositionID": 5,
+                    "Name": "Dog Catcher Trainee",
+                    "DepartmentID": 2,
+                    "OwnerID": "a4aa79d2-2180-4688-ad60-31822e463cb9",
+                    "CreationDate": "2021-08-15T12:11:43.743",
+                    "ModificationDate": null,
+                    "AvailablePositionCount": 2
+                },
+                {
+                    "PositionID": 6,
+                    "Name": "Dog Catcher Driver",
+                    "DepartmentID": 2,
+                    "OwnerID": "a4aa79d2-2180-4688-ad60-31822e463cb9",
+                    "CreationDate": "2021-08-15T12:11:57.31",
+                    "ModificationDate": null,
+                    "AvailablePositionCount": 2
+                }
+            ],
+            "ID": 2,
+            "Name": "Dog Catchers Department",
+            "Employees": [],
+            "CreationDate": "2021-08-15T12:05:49.49",
+            "ModificationionDate": null,
+            "OwnerID": "02a5d24d-23b7-4127-81b7-7766ee1b2295"
+        },
+        "OwnerID": "a4aa79d2-2180-4688-ad60-31822e463cb9",
+        "CreationDate": "2021-08-15T12:11:30.94",
+        "ModificationDate": null,
+        "AvailablePositionCount": 0
+    },
+    "CreationDate": "2021-08-15T12:26:36.423",
+    "ModificationDate": null
+}

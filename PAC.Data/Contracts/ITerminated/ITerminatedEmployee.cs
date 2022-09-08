@@ -1,0 +1,13 @@
+﻿using PAC.Data.Contracts.IEmployees;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PAC.Data.Contracts.ITerminated
+{
+    public interface ITerminatedEmployee : IEmployee
+    {
+    }
+}

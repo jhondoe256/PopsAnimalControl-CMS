@@ -1,0 +1,81 @@
+﻿@model PopsAnimalControl_MVC.Models.ViewModels.DepartmentViewModels.DepartmentDetail
+
+@{
+    ViewBag.Title = "Detail";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2>Detail</h2>
+
+<div>
+    <h4>DepartmentDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModificationionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModificationionDate)
+        </dd>
+
+    </dl>
+
+    @if (Model.Department_Positions.Count > 0)
+    {
+        <ol>
+            <h2>Positions:</h2>
+            @foreach (var p in Model.Department_Positions)
+            {
+
+                <li>@p.Name</li>
+
+            }
+        </ol>
+    }
+    else
+    {
+        <p>There are no Available Positions!</p>
+    }
+
+    @if (Model.Employees.Count > 0)
+    {
+        <ol>
+            <h2>Employees:</h2>
+            @foreach (var emp in Model.Employees)
+            {
+                <li>@emp.FirstName @emp.LastName </li>
+            }
+        </ol>
+    }
+    else
+    {
+        <p>There are No Assigned Employees!</p>
+    }
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
